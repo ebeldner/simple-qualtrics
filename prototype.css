@@ -292,3 +292,11 @@ button[disabled] {
     transform: translateX(100%) rotate(720deg);
     transition: transform 0.5s ease-out;
 }
+
+
+/* Additional Snippet of CSS */
+#q{position:absolute;height:100%;width:100%;z-index:1}#q::before{content:'';display:block;position:fixed;top:30%;right:50%;width:50px;height:50px;border:6px solid transparent;border-top-color:#0b6ed0;border-left-color:#0b6ed0;border-radius:80px;animation:q 1s linear infinite;margin:-33px -33px 0 0;box-sizing:border-box}@keyframes q{0%{transform:rotate(0)}100%{transform:rotate(360deg)}}
+
+/* Linked CSS */
+@import url("https://insead.eu.qualtrics.com/jfe/themes/component-skins/qualtrics.simple/null/9a6af1805d5ce52e6c778b93b8eb0a34144431df/version-1657641237612-591c52/components/shared.css");
+@import url("https://insead.eu.qualtrics.com/jfe/themes/component-skins/qualtrics.simple/null/9a6af1805d5ce52e6c778b93b8eb0a34144431df/version-1657641237612-591c52/components/mc.css");
