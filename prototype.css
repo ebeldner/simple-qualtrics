@@ -27,15 +27,8 @@
 .Skin input[type="search"],
 .Skin input[type="text"],
 .Skin textarea {
-    border: 2px inset #999;
-    background-color: rgba(0,0,0,.00);
-    max-width: 100%;
-    color: #000;
-    -webkit-border-radius: 0;
-    -moz-border-radius: 0;
-    -ms-border-radius: 0;
-    -o-border-radius: 0;
-    border-radius: 0;
+    border: 2px inset #999 !important;
+    background-color: rgba(0,0,0,.00) !important;
 }
 
 .Skin .MC .TextEntryBox,
@@ -45,6 +38,6 @@
 .Skin .TE .PW .InputText,
 .Skin .TE .SL .InputText,
 .Skin input.TextEntryBox {
-    min-height: 44px;
-    padding: 4px;
+    min-height: 42px !important;
+    padding: 4px !important;
 }
