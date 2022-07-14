@@ -1,308 +1,50 @@
-/*
-   Qualtrics is rolling out a "simple" layout / template that strips its bad-UX custom styling for UI widgets. 
-   However, it does not yet support per-question Javascript. This CSS allows use of the Flat layout, which 
-   does support per-question javascript, and simplifies the Flat UI widgets further.
-*/
-
-/***************************************************/
-/*** CSS from Qualtrics SIMPLE Layout template     */
-/***************************************************/
-
-lightbox-container{background-color:rgba(0,0,0,.7)}#lightbox-container .icon{fill:#fff}#lightbox-header{align-items:center;background-color:#000;color:#fff;display:flex;font-size:.875rem;height:2.5rem;padding:0 1.25rem;position:fixed;width:100%}#lightbox{display:flex;flex-grow:1;justify-content:center;max-height:100%}#lightbox-img-label{align-items:center;display:flex;padding:5rem 2.5rem 2.5rem}#lightbox-img{background-color:#fff;box-shadow:0 1rem 1.875rem rgba(0,0,0,.1),0 2.8125rem 8.125rem rgba(0,0,0,.14)}#lightbox-close{margin-left:auto}[dir=rtl] #lightbox-close{margin-left:0;margin-right:auto} 
-
-.display-with-image{display:grid}.display-with-image .expandable-image-button{display:flex}.display-with-image .expandable-image{display:flex;grid-column-start:1;grid-row-start:1}.display-with-image .display-with-image-display{grid-column-start:1;grid-row-start:1}.display-with-image.display-top .display-with-image-display{grid-row-start:1}.display-with-image.display-top .expandable-image{grid-row-start:2}.display-with-image.display-right .display-with-image-display{grid-column-start:2}.display-with-image.display-right .expandable-image{grid-column-start:1}.display-with-image.display-bottom .display-with-image-display{grid-row-start:2}.display-with-image.display-bottom .expandable-image{grid-row-start:1}.display-with-image.display-left .display-with-image-display{grid-column-start:1}.display-with-image.display-left .expandable-image{grid-column-start:2}
-
-.choice-content{display:flex}
-
-.mc .choice-label{align-items:center;cursor:pointer;display:flex}.mc .choice-label *{cursor:pointer}.radio-button{flex-shrink:0}.mc.vertical .choices.columnar{display:grid}
-
-#progress-bar.progress-bar-top{order:2}#progress-bar.progress-bar-bottom{margin-top:.5rem;order:4}#progress-bar.progress-bar-verbose{margin-bottom:.375rem}#progress-bar #progress-bar-percent{margin:0 .5rem 0 .25rem}#progress-bar progress{height:.5rem;width:inherit}
-
-.shadowbox{position:relative}.shadowbox .shadowbox-inner{overflow-x:auto}.shadowbox .shadow{bottom:0;color:rgba(0,0,0,.7);left:0;pointer-events:none;position:absolute;right:0;top:0;transition:all .2s ease-out}.shadowbox .shadow.top{box-shadow:inset 0 4em 3em -4em}.shadowbox .shadow.right{box-shadow:inset -4em 0 3em -4em}[dir=rtl] .shadowbox .shadow.right{box-shadow:inset 4em 0 3em -4em}.shadowbox .shadow.bottom{box-shadow:inset 0 -4em 3em -4em}.shadowbox .shadow.left{box-shadow:inset 4em 0 3em -4em}[dir=rtl] .shadowbox .shadow.left{box-shadow:inset -4em 0 3em -4em}
-
-.popper{display:flex;left:-999999rem;position:absolute;top:-999999rem;z-index:100}.popper>*{flex-grow:1;max-height:100%}
-
-.select-menu.menu-button{align-items:center;display:flex;justify-content:space-between}.select-menu.menu-dropdown{list-style:none;overflow:auto}.select-menu.menu-dropdown .menu-item{cursor:pointer}.select-menu.menu-dropdown .menu-item:hover,.select-menu.menu-dropdown .menu-item.focused{background:rgba(0,0,0,.045)}.select-menu.menu-dropdown .menu-item.selected{background:rgba(11,110,208,.08)}.select-menu.menu-dropdown .menu-item.selected:hover,.select-menu.menu-dropdown .menu-item.selected.focused{background:rgba(11,110,208,.12)}
-
-.overlay{background-color:#fff;height:100%;left:50%;opacity:40%;position:fixed;top:50%;transform:translate(-50%, -50%);width:100%;z-index:99}.loading-container{align-items:center;display:flex;height:100%;justify-content:center;width:100%}
-
-.modal{background:rgba(0,0,0,.3);display:flex;flex-direction:column;height:100%;left:0;overflow-y:auto;position:fixed;top:0;width:100%;z-index:1}
-
-#dialog{align-items:center;z-index:101}#dialog-box{background:#fff;border-radius:.25rem;color:#000;display:flex;flex-direction:column;padding:.5rem;position:relative;top:25%}#dialog-content{flex-grow:1;order:2}#dialog-header{align-items:center;display:flex;justify-content:space-between;order:1}#dialog-buttons{order:3}
-
-/***************************************************/
-/* CSS specific to SIMPLE Layout (???)  */
-/***************************************************/
-
-@font-face {
-    font-family: external-link-icon;
-    font-style: normal;
-    font-weight: 400;
-    src: url(/jfe/static/dist/v2/f/external-link-icon.2d06da26.woff) format("woff");
-}
-* {
-    margin: 0;
-    padding: 0;
-}
-html {
-    box-sizing: border-box;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
-*,
-*::before,
-*::after {
-    box-sizing: inherit;
-}
-main {
-    display: block;
-}
-textarea {
-    overflow: auto;
-    -ms-overflow-style: -ms-autohiding-scrollbar;
-}
-img {
-    height: auto;
+.Skin .MC .TextEntryBox,
+.Skin .TE .ESTB .InputText,
+.Skin .TE .FORM .InputText,
+.Skin .TE .ML .InputText,
+.Skin .TE .PW .InputText,
+.Skin .TE .SL .InputText {
     max-width: 100%;
+    margin: 2px 0;
 }
-*[tabIndex="-1"]:focus-visible {
-    outline: 0;
+@media (min-width: 980px) {
+    .Skin .TE .ESTB .InputText,
+    .Skin .TE .ML .InputText {
+        max-width: 1080px;
+    }
 }
-#app,
-.popper {
-    background: #fff;
+
+
+.Skin .MC .TextEntryBox,
+.Skin .TE .ESTB .InputText,
+.Skin .TE .FORM .InputText,
+.Skin .TE .ML .InputText,
+.Skin .TE .PW .InputText,
+.Skin .TE .SL .InputText,
+.Skin .TE textarea,
+.Skin input.TextEntryBox,
+.Skin input[type="password"],
+.Skin input[type="search"],
+.Skin input[type="text"],
+.Skin textarea {
+    border: 2px inset #999;
+    background-color: rgba(0,0,0,.00);
+    max-width: 100%;
     color: #000;
-}
-#page {
-    display: flex;
-    flex-direction: column;
-    overflow-x: hidden;
-}
-#header {
-    order: 1;
-}
-#survey-canvas {
-    order: 3;
-}
-#footer {
-    order: 5;
-}
-#language-selector-container:empty {
-    display: none;
-}
-button {
-    cursor: pointer;
-}
-button[disabled] {
-    cursor: default;
-}
-.a11y-only {
-    clip: rect(1rem, 1rem, 1rem, 1rem);
-    height: 1rem;
-    overflow: hidden;
-    position: absolute;
-    width: 1rem;
-}
-.rich-text ul,
-.rich-text ol {
-    all: revert;
-}
-.icon-button {
-    background: none;
-    height: 2.25rem;
-    width: 2.25rem;
-}
-.icon-button svg {
-    vertical-align: middle;
-}
-#contents {
-    position: relative;
-    transition: height 0.5s;
-}
-#end-of-survey {
-    text-align: center;
-}
-#end-of-survey:focus {
-    outline: none;
-}
-#plug a::after {
-    content: "A";
-    font-family: external-link-icon;
-}
-#fatal-error-ref {
-    display: block;
-    font-size: 0.75rem;
-    margin-top: 0.375rem;
-}
-.transition-wait,
-.transition-exit-done {
-    display: none;
-}
-.transition-none .transition-exit,
-.transition-none .transition-exit-active {
-    display: none;
-}
-.transition-slide .transition-exit {
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 100%;
-}
-[dir="ltr"] .transition-slide.transition-forward .transition-enter,
-[dir="rtl"] .transition-slide.transition-reverse .transition-enter {
-    transform: translateX(100vw);
-    transition: transform 0s;
-}
-[dir="ltr"] .transition-slide.transition-forward .transition-enter-active,
-[dir="rtl"] .transition-slide.transition-reverse .transition-enter-active {
-    transform: translateX(0);
-    transition: transform 0.5s ease-out;
-}
-[dir="ltr"] .transition-slide.transition-forward .transition-exit,
-[dir="rtl"] .transition-slide.transition-reverse .transition-exit {
-    transition: transform 0s ease-out;
-}
-[dir="ltr"] .transition-slide.transition-forward .transition-exit-active,
-[dir="rtl"] .transition-slide.transition-reverse .transition-exit-active {
-    transform: translateX(-100vw);
-    transition: transform 0.5s ease-out;
-}
-[dir="ltr"] .transition-slide.transition-reverse .transition-enter,
-[dir="rtl"] .transition-slide.transition-forward .transition-enter {
-    transform: translateX(-100vw);
-    transition: transform 0s;
-}
-[dir="ltr"] .transition-slide.transition-reverse .transition-enter-active,
-[dir="rtl"] .transition-slide.transition-forward .transition-enter-active {
-    transform: translateX(0);
-    transition: transform 0.5s ease-out;
-}
-[dir="ltr"] .transition-slide.transition-reverse .transition-exit-active,
-[dir="rtl"] .transition-slide.transition-forward .transition-exit-active {
-    transform: translateX(100vw);
-    transition: transform 0.5s ease-out;
-}
-.transition-fade .transition-enter {
-    opacity: 0;
-}
-.transition-fade .transition-enter-active {
-    opacity: 1;
-    transition: opacity 0.25s ease-in 0.25s;
-}
-.transition-fade .transition-exit {
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 100%;
-}
-.transition-fade .transition-exit-active {
-    opacity: 0;
-    transition: opacity 0.25s ease-out;
-}
-.transition-flip {
-    perspective: 50rem;
-    transform-style: preserve-3d;
-    transition: height 0.5s;
-}
-.transition-flip .transition-content {
-    backface-visibility: hidden;
-}
-[dir="ltr"] .transition-flip.transition-forward .transition-enter,
-[dir="rtl"] .transition-flip.transition-reverse .transition-enter {
-    transform: rotateY(90deg);
-    transition: transform 0s;
-}
-[dir="ltr"] .transition-flip.transition-forward .transition-enter-active,
-[dir="rtl"] .transition-flip.transition-reverse .transition-enter-active {
-    transform: rotateY(0deg);
-    transition: 0.25s linear 0.25s;
-}
-[dir="ltr"] .transition-flip.transition-forward .transition-exit,
-[dir="rtl"] .transition-flip.transition-reverse .transition-exit {
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 100%;
-}
-[dir="ltr"] .transition-flip.transition-forward .transition-exit-active,
-[dir="rtl"] .transition-flip.transition-reverse .transition-exit-active {
-    opacity: 0;
-    transform: rotateY(-90deg);
-    transition: transform linear 0.25s, opacity 0s 0.25s;
-}
-[dir="ltr"] .transition-flip.transition-reverse .transition-enter,
-[dir="rtl"] .transition-flip.transition-forward .transition-enter {
-    transform: rotateY(-90deg);
-    transition: transform 0s;
-}
-[dir="ltr"] .transition-flip.transition-reverse .transition-enter-active,
-[dir="rtl"] .transition-flip.transition-forward .transition-enter-active {
-    transform: rotateY(0deg);
-    transition: 0.25s linear 0.25s;
-}
-[dir="ltr"] .transition-flip.transition-reverse .transition-exit,
-[dir="rtl"] .transition-flip.transition-forward .transition-exit {
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 100%;
-}
-[dir="ltr"] .transition-flip.transition-reverse .transition-exit-active,
-[dir="rtl"] .transition-flip.transition-forward .transition-exit-active {
-    opacity: 0;
-    transform: rotateY(90deg);
-    transition: transform linear 0.25s, opacity 0s 0.25s;
-}
-.transition-roll .transition-exit {
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 100%;
-}
-[dir="ltr"] .transition-roll.transition-forward .transition-enter,
-[dir="rtl"] .transition-roll.transition-reverse .transition-enter {
-    transform: translateX(100%);
-    transition: transform 0s;
-}
-[dir="ltr"] .transition-roll.transition-forward .transition-enter-active,
-[dir="rtl"] .transition-roll.transition-reverse .transition-enter-active {
-    transform: translateX(0) rotate(-720deg);
-    transition: transform 0.5s ease-out;
-}
-[dir="ltr"] .transition-roll.transition-forward .transition-exit,
-[dir="rtl"] .transition-roll.transition-reverse .transition-exit {
-    transition: transform 0s ease-out;
-}
-[dir="ltr"] .transition-roll.transition-forward .transition-exit-active,
-[dir="rtl"] .transition-roll.transition-reverse .transition-exit-active {
-    transform: translateX(-100%) rotate(-720deg);
-    transition: transform 0.5s ease-out;
-}
-[dir="ltr"] .transition-roll.transition-reverse .transition-enter,
-[dir="rtl"] .transition-roll.transition-forward .transition-enter {
-    transform: translateX(-100%);
-    transition: transform 0s;
-}
-[dir="ltr"] .transition-roll.transition-reverse .transition-enter-active,
-[dir="rtl"] .transition-roll.transition-forward .transition-enter-active {
-    transform: translateX(0) rotate(720deg);
-    transition: transform 0.5s ease-out;
-}
-[dir="ltr"] .transition-roll.transition-reverse .transition-exit-active,
-[dir="rtl"] .transition-roll.transition-forward .transition-exit-active {
-    transform: translateX(100%) rotate(720deg);
-    transition: transform 0.5s ease-out;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+    border-radius: 0;
 }
 
-
-/* Additional Snippet of CSS */
-#q{position:absolute;height:100%;width:100%;z-index:1}#q::before{content:'';display:block;position:fixed;top:30%;right:50%;width:50px;height:50px;border:6px solid transparent;border-top-color:#0b6ed0;border-left-color:#0b6ed0;border-radius:80px;animation:q 1s linear infinite;margin:-33px -33px 0 0;box-sizing:border-box}@keyframes q{0%{transform:rotate(0)}100%{transform:rotate(360deg)}}
-
-/* Linked CSS */
-
-/* @import url("https://insead.eu.qualtrics.com/jfe/themes/component-skins/qualtrics.simple/null/9a6af1805d5ce52e6c778b93b8eb0a34144431df/version-1657641237612-591c52/components/shared.css");
-   @import url("https://insead.eu.qualtrics.com/jfe/themes/component-skins/qualtrics.simple/null/9a6af1805d5ce52e6c778b93b8eb0a34144431df/version-1657641237612-591c52/components/mc.css");
-*/
-
-@import url("https://ebeldner.github.io/simple-qualtrics/qualtrics-simple-template.shared.css");
-@import url("https://ebeldner.github.io/simple-qualtrics/qualtrics-simple-template.mc.css");
-
+.Skin .MC .TextEntryBox,
+.Skin .TE .ESTB .InputText,
+.Skin .TE .FORM .InputText,
+.Skin .TE .ML .InputText,
+.Skin .TE .PW .InputText,
+.Skin .TE .SL .InputText,
+.Skin input.TextEntryBox {
+    min-height: 44px;
+    padding: 4px;
+}
