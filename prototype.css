@@ -114,27 +114,27 @@
 }
 
 
-@media (max-width:767px) {
+@media (max-width:769px) {
   .LabelWrapper .ChoiceTextPositionLeft + .TextEntryBox { max-width:60%; }
- 
+  .Skin .SkinInner {
+    padding: 20px 5%; 
+  }
+
 }
 
 @media (max-width: 480px) {
-
-     .Skin .QuestionText {
-     font-size: 16px !important;
-     }
 
      .Skin .SkinInner {
        padding: 20px 5%; 
      }
 
-      /*
-      .Skin .Matrix .QuestionBody, .Skin .SBS .QuestionBody  {   font-size: 16px !important;  }
-      .Skin .QuestionBody { font-size: 16px !important; }
-      .Skin .q-matrix .answered-indicator {font-size: 16px !important;}
-      .JFEScope .Skin .q-matrix .table-cell { font-size: 16px !important; }
-      */
+      .Skin .QuestionText,
+      .Skin .Matrix .QuestionBody, .Skin .SBS .QuestionBody,
+      .Skin .QuestionBody,
+      .Skin .q-matrix .answered-indicator,
+      .JFEScope .Skin .q-matrix .table-cell,
+      select, input[type="text"],textarea
+      { font-size: 16px !important; }
 
      .Skin .answered-indicator {
       overflow: auto !important;
