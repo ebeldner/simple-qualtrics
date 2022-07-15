@@ -107,7 +107,6 @@
 .Skin .RO .RB th,
 .Skin .SBSMatrix th
 {
- background: hotpink;
  padding: 8px 2px;
  margin: 0px;
 }
@@ -115,3 +114,36 @@
 .Skin .Matrix th span.LabelWrapper {
  padding:0 !important; 
 }
+
+
+@media (max-width: 480px) {
+
+     .Skin .QuestionText {
+     font-size: 16px !important;
+     }
+     .Skin .SkinInner {
+       padding: 20px 5%; 
+     }
+
+      .Skin .Matrix .QuestionBody, .Skin .SBS .QuestionBody  {   font-size: 16px !important;  }
+      .Skin .QuestionBody { font-size: 16px !important; }
+      .Skin .q-matrix .answered-indicator {font-size: 16px !important;color: hotpink;}
+      .JFEScope .Skin .q-matrix .table-cell { font-size: 16px; }
+
+     .Skin .answered-indicator {
+      overflow: auto !important;
+      height: auto !important;
+      padding: 10px 0 10px 0;
+      font-weight: bold;
+     } 
+
+     .Skin .answered-indicator span::before {
+      content: "• ";
+     }
+     
+     .Skin .Matrix .QuestionBody {
+       padding: 0px !important;
+     }
+
+ 
+ }
