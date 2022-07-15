@@ -102,3 +102,16 @@
  margin: 24px 0;
  
 }
+
+.Skin .Matrix th,
+.Skin .RO .RB th,
+.Skin .SBSMatrix th
+{
+ background: hotpink;
+ padding: 8px 2px;
+ margin: 0px;
+}
+
+.Skin .Matrix th span.LabelWrapper {
+ padding:0 !important; 
+}
