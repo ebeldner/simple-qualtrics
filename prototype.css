@@ -25,7 +25,7 @@
 .Skin input.TextEntryBox,
 .Skin select 
  {
-    min-height: 38px !important;
+    min-height: 42px !important;
     padding: 4px !important;
 }
 
@@ -53,27 +53,16 @@
 
 .LabelWrapper .ChoiceTextPositionLeft + .TextEntryBox {  }
 
-.Skin label.SingleAnswer,
-.Skin label,MultipleAnswer
-{
-    display: inline-block !important;
-    background: rgba(255, 255, 255, 1.0) !important;
-}
-
+.Skin .MC .MAVR input, 
 .Skin .MC .MAVR span.LabelWrapper, 
+.Skin .MC .SAVR input, 
 .Skin .MC .SAVR span.LabelWrapper
 {
 
 }
 
-.Skin .MC .MAVR input, 
-.Skin .MC .SAVR input, 
-{
-}
-
 .Skin .MC .MAVR input.TextEntryBox, 
 .Skin .MC .SAVR input.TextEntryBox
 {
-    float: none !important;
 
 }
