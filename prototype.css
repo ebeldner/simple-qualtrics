@@ -51,8 +51,6 @@
 }
 
 
-.LabelWrapper .ChoiceTextPositionLeft + .TextEntryBox {  }
-
 .Skin .MC .MAVR input, 
 .Skin .MC .MAVR span.LabelWrapper, 
 .Skin .MC .SAVR input, 
@@ -116,6 +114,11 @@
 }
 
 
+@media (max-width:767px) {
+  .LabelWrapper .ChoiceTextPositionLeft + .TextEntryBox { max-width:60%; }
+ 
+}
+
 @media (max-width: 480px) {
 
      .Skin .QuestionText {
@@ -126,10 +129,12 @@
        padding: 20px 5%; 
      }
 
+      /*
       .Skin .Matrix .QuestionBody, .Skin .SBS .QuestionBody  {   font-size: 16px !important;  }
       .Skin .QuestionBody { font-size: 16px !important; }
       .Skin .q-matrix .answered-indicator {font-size: 16px !important;}
       .JFEScope .Skin .q-matrix .table-cell { font-size: 16px !important; }
+      */
 
      .Skin .answered-indicator {
       overflow: auto !important;
@@ -145,6 +150,8 @@
      .Skin .Matrix .QuestionBody {
        padding: 0px !important;
      }
+
+   .LabelWrapper .ChoiceTextPositionLeft + .TextEntryBox { max-width:60%; }
 
  
  }
