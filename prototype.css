@@ -121,14 +121,15 @@
      .Skin .QuestionText {
      font-size: 16px !important;
      }
+
      .Skin .SkinInner {
        padding: 20px 5%; 
      }
 
       .Skin .Matrix .QuestionBody, .Skin .SBS .QuestionBody  {   font-size: 16px !important;  }
       .Skin .QuestionBody { font-size: 16px !important; }
-      .Skin .q-matrix .answered-indicator {font-size: 16px !important;color: hotpink;}
-      .JFEScope .Skin .q-matrix .table-cell { font-size: 16px; }
+      .Skin .q-matrix .answered-indicator {font-size: 16px !important;}
+      .JFEScope .Skin .q-matrix .table-cell { font-size: 16px !important; }
 
      .Skin .answered-indicator {
       overflow: auto !important;
